@@ -13,8 +13,8 @@ function fetchCookieFromStorage(){
   let cookies = document.cookie.split(';'),color, size;
   for(let cookie of cookies){
     const [key,value] = cookie.split("=");
-    if(key.trim().toLowerCase()==='Color'.toLowerCase()) color = value;
-    if(key.trim().toLowerCase()==='Size'.toLowerCase()) size = value;
+    if(key.trim().toLowerCase()==='fontcolor'.toLowerCase()) color = value;
+    if(key.trim().toLowerCase()==='fontsize'.toLowerCase()) size = value;
   }
   fetchUserFontColor.value = color;
   fetchUserFontSize.value = size;
