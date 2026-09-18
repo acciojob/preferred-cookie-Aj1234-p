@@ -22,8 +22,8 @@ function fetchCookieFromStorage(){
 
 submitButton.addEventListener('click',(e)=>{
   e.preventDefault();
-  document.cookie = `Color= ${fetchUserFontColor.value}`;
-  document.cookie = `Size = ${fetchUserFontSize.value}`;
+  document.cookie = `fontcolor= ${fetchUserFontColor.value}`;
+  document.cookie = `fontsize= ${fetchUserFontSize.value}`;
 })
 
 fetchCookieFromStorage();
