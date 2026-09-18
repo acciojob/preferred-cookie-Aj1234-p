@@ -7,13 +7,14 @@ let fetchUserFontColor = document.querySelector('#fontcolor');
 function fetchCookieFromStorage(){
   if(!document.cookie) {
     console.log("Still this time, cookies are not stored")
+	    // fetchUserFontSize.value = `${16}`;
     return;
   }
   let cookies = document.cookie.split(';'),color, size;
   for(let cookie of cookies){
     const [key,value] = cookie.split("=");
-    if(key.trim().toLowerCase()==='fontcolor'.toLowerCase()) color = value;
-    if(key.trim().toLowerCase()==='fontsize'.toLowerCase()) size = value;
+    if(key.trim().toLowerCase()==='fontcolor'.toLowerCase()) color = value.trim();
+    if(key.trim().toLowerCase()==='fontsize'.toLowerCase()) size = value.trim();
   }
   fetchUserFontColor.value = color;
   fetchUserFontSize.value = size;
@@ -21,8 +22,8 @@ function fetchCookieFromStorage(){
 
 submitButton.addEventListener('click',(e)=>{
   e.preventDefault();
-  document.cookie = `fontcolor= ${fetchUserFontColor.value}`;
-  document.cookie = `fontsize= ${fetchUserFontSize.value}`;
+  document.cookie = `fontcolor=${fetchUserFontColor.value}`;
+  document.cookie = `fontsize=${fetchUserFontSize.value}`;
 })
 
 fetchCookieFromStorage();
