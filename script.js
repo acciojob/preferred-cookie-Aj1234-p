@@ -16,11 +16,11 @@ function fetchCookieFromStorage(){
   }
   if(color) {
      fetchUserFontColor.value = color;
-    document.documentElement.style.setProperty('--font-color',color);
+    document.documentElement.style.setProperty('--fontcolor',color);
   }
   if(size){
      fetchUserFontSize.value = size; 
-     document.documentElement.style.setProperty('--font-size',`${size}px`);
+     document.documentElement.style.setProperty('--fontsize',`${size}px`);
   }
 }
 
@@ -30,8 +30,8 @@ submitButton.addEventListener('click',(e)=>{
   const size = fetchUserFontSize.value;
   document.cookie = `fontcolor=${color}; max-age=${60*60*24*30}; path=/`;
   document.cookie = `fontsize=${size}; max-age=${60*60*24*30}; path=/`;
-  document.documentElement.style.setProperty('--font-color',color);
-  document.documentElement.style.setProperty('--font-size',`${size}px`);
+  document.documentElement.style.setProperty('--fontcolor',color);
+  document.documentElement.style.setProperty('--fontsize',`${size}px`);
 })
 
 fetchCookieFromStorage();

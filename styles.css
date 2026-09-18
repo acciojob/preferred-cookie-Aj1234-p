@@ -1,9 +1,9 @@
 :root {
-  --font-size: 16px;
-  --font-color: #000000;
+  --fontsize: 16px;
+  --fontcolor: #000000;
 }
 
 body {
-  font-size: var(--font-size);
-  color: var(--font-color);
+  font-size: var(--fontsize);
+  color: var(--fontcolor);
 }
