@@ -22,7 +22,7 @@ function fetchCookieFromStorage(){
 
 submitButton.addEventListener('click',(e)=>{
   e.preventDefault();
-  document.cookie = `Color=${fetchUserFontColor.value}`;
+  document.cookie = `Color= ${fetchUserFontColor.value}`;
   document.cookie = `Size = ${fetchUserFontSize.value}`;
 })
 
